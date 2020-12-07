@@ -16,7 +16,7 @@
         <button class="button button--circle side-nav__button side-nav__button--search-button" type="button" aria-label="Восстановление"><img class="burger button__img" src="img/search.png"></button>
       </div>
       <nav class="side-nav__links">
-        <ul>
+        <ul class="side-nav__list">
           <li><a class="side-nav__link side-nav__link--active" href="#">Ремонт техники</a></li>
           <li><a class="side-nav__link" href="#">Услуги и сервисы</a></li>
           <li><a class="side-nav__link" href="#">Корпоративным клиентам</a></li>
@@ -29,13 +29,20 @@
       </nav>
       <div class="side-nav__footer">
         <div class="footer-buttons">
-          <button class="button button--circle footer-buttons__button footer-buttons__button--call-button" type="button" aria-label="Звонок" id="callOpenSide"><img class="call button__img" src="img/call.png">
+          <button class="button button--circle footer-buttons__button footer-buttons__button--call-button" type="button" aria-label="Звонок" id="callOpenSide">
+            <img class="call button__img" src="img/call.png">
           </button>
-          <button class="button button--circle footer-buttons__button footer-buttons__button--messages-button" type="button" aria-label="Отправить сообщение" id="feedbackOpenSide"><img class="messages button__img" src="img/messages.png"></button>
-          <button class="button button--circle footer-buttons__button footer-buttons__button--contacts-button" type="button" aria-label="Контакты"><img class="contacts button__img" src="img/profile.png"></button>
+          <button class="button button--circle footer-buttons__button footer-buttons__button--messages-button" type="button" aria-label="Отправить сообщение" id="feedbackOpenSide">
+            <img class="messages button__img" src="img/messages.png">
+          </button>
+          <button class="button button--circle footer-buttons__button footer-buttons__button--contacts-button" type="button" aria-label="Контакты">
+            <img class="contacts button__img" src="img/profile.png"></button>
         </div>
       </div>
-      <address class="address"><a class="address__item address__email" href="mailto:mail@cps.com">mail@cps.com</a><a class="address__item address__phone" href="tel:88008908900">8800 890 8900</a></address>
+      <address class="address">
+        <a class="address__item address__email" href="mailto:mail@cps.com">mail@cps.com</a>
+        <a class="address__item address__phone" href="tel:88008908900">8800 890 8900</a>
+      </address>
       <div class="switch-language">
         <button class="switch-language__button switch-language__button--active">RU</button>
         <button class="switch-language__button">EN</button>
@@ -47,11 +54,21 @@
     <div class="feedback__wrapper">
       <button class="button button--circle feedback__button feedback__button--close-button" type="button" aria-label="Восстановление" id="feedbackClose"></button>
       <h2 class="feedback__title">Обратная связь</h2>
-      <form class="form feedback__form" action="#" method="post"><input class="form__input" type="text" name="name" value="Имя"><input class="form__input" type="tel" name="phone" value="Телефон"><input class="form__input" type="email" name="email" value="Электронная почта"><textarea class="form__input form__textarea" name="message" placeholder="Сообщение"></textarea>
-        <p class="feedback__description">Нажимая “отправить”, вы даете согласие на &nbsp<a class="modal-link" href="#">обработку
-          персональных данных</a> и соглашаетесь с нашей &nbsp<a class="modal-link" href="#">политикой
-          конфиденциальности</a></p>
-        <button class="button button--long submit-button" type="submit">Отправить<img src="img/long-btn-arrow.png"></button>
+      <form class="form feedback__form" action="#" method="post">
+        <input class="form__input" type="text" name="name" value="Имя">
+        <input class="form__input" type="tel" name="phone" value="Телефон">
+        <input class="form__input" type="email" name="email" value="Электронная почта">
+        <textarea class="form__input form__textarea" name="message" placeholder="Сообщение"></textarea>
+        <p class="feedback__description">Нажимая “отправить”, вы даете согласие на &nbsp
+          <a class="modal-link" href="#">
+            обработку персональных данных
+        </a> и соглашаетесь с нашей &nbsp
+        <a class="modal-link" href="#">
+          политикой конфиденциальности</a>
+        </p>
+        <button class="button button--long submit-button" type="submit"><small>Отправить</small>
+          <img src="img/long-btn-arrow.png">
+        </button>
       </form>
     </div>
   </div>
@@ -59,10 +76,16 @@
     <div class="call-modal__wrapper">
       <button class="button button--circle call-modal__button call-modal__button--close-button" type="button" aria-label="Восстановление" id="callClose"></button>
       <h2 class="call-modal__title">Заказать звонок</h2>
-      <form class="form call-modal__form" action="#" method="post"><input class="form__input" type="tel" name="phone" value="Телефон">
-        <p class="call-modal__description">Нажимая “отправить”, вы даете согласие на &nbsp<a class="modal-link" href="#">обработку
-          персональных данных</a> и соглашаетесь с нашей &nbsp<a class="modal-link" href="#">политикой
-          конфиденциальности</a></p>
+      <form class="form call-modal__form" action="#" method="post">
+        <input class="form__input" type="tel" name="phone" value="Телефон">
+        <p class="call-modal__description">Нажимая “отправить”, вы даете согласие на &nbsp
+          <a class="modal-link" href="#">
+          обработку персональных данных
+        </a> и соглашаетесь с нашей &nbsp
+        <a class="modal-link" href="#">
+          политикой конфиденциальности
+        </a>
+      </p>
         <button class="button button--long submit-button" type="submit">Отправить<img src="img/long-btn-arrow.png"></button>
       </form>
     </div>
@@ -71,25 +94,37 @@
     <header class="header">
       <div class="header-bar">
         <div class="header-bar__left">
-          <button class="button button--circle header-bar__button header-bar__button--menu-button" type="button" aria-label="Меню" id="openMenu"><img class="burger button__img" src="img/burger.png">
+          <button class="button button--circle header-bar__button header-bar__button--menu-button" type="button" aria-label="Меню" id="openMenu">
+                  <img class="burger button__img" src="img/burger.png">
           </button>
-          <a class="header-bar__logo" href="#" aria-label="Логотип"><img src="img/logo.png"></a>
+          <a class="header-bar__logo" href="#" aria-label="Логотип">
+            <img src="img/logo.png"></a>
         </div>
         <div class="header-bar__middle">
-          <button class="button button--circle header-bar__button header-bar__button--call-button" type="button" aria-label="Звонок" id="callHeaderOpen"><img class="call button__img" src="img/call.png">
+          <button class="button button--circle header-bar__button header-bar__button--call-button" type="button" aria-label="Звонок" id="callHeaderOpen">
+            <img class="call button__img" src="img/call.png">
           </button>
-          <button class="button button--circle header-bar__button header-bar__button--messages-button" type="button" aria-label="Отправить сообщение" id="feedbackOpenHeader"><img class="messages button__img" src="img/messages.png"></button>
-          <button class="button button--circle header-bar__button header-bar__button--contacts-button" type="button" aria-label="Контакты"><img class="contacts button__img" src="img/profile.png"></button>
+          <button class="button button--circle header-bar__button header-bar__button--messages-button" type="button" aria-label="Отправить сообщение" id="feedbackOpenHeader">
+            <img class="messages button__img" src="img/messages.png">
+          </button>
+          <button class="button button--circle header-bar__button header-bar__button--contacts-button" type="button" aria-label="Контакты">
+            <img class="contacts button__img" src="img/profile.png">
+          </button>
         </div>
         <div class="header-bar__right">
-          <button class="button button--circle header-bar__button header-bar__button--repair-button" type="button" aria-label="Восстановление"><img class="repair button__img" src="img/repair.png">
+          <button class="button button--circle header-bar__button header-bar__button--repair-button" type="button" aria-label="Восстановление">
+            <img class="repair button__img" src="img/repair.png">
           </button>
-          <button class="button button--circle header-bar__button header-bar__button--check-button" type="button" aria-label="Статус"><img class="check button__img" src="img/check.png"></button>
+          <button class="button button--circle header-bar__button header-bar__button--check-button" type="button" aria-label="Статус">
+            <img class="check button__img" src="img/check.png">
+          </button>
         </div>
       </div>
       <div class="header-group"><h1 class="header__title">Услуги и сервисы</h1>
         <div class="header__button-group">
-          <button class="button button--circle header__button header__button-repair" type="button" aria-label="Восстановление"><img class="repair button__img" src="img/repair.png"></button>
+          <button class="button button--circle header__button header__button-repair" type="button" aria-label="Восстановление">
+            <img class="repair button__img" src="img/repair.png">
+          </button>
           <button class="button button--circle header__button header__button-check" type="button" aria-label="Статус"><img class="check button__img" src="img/check.png">
           </button>
         </div>
@@ -149,37 +184,100 @@
     <div class="repair"><h2 class="block-title block-title__repair">Ремонт различных видов техники</h2>
       <div class="swiper-container repair-slider">
         <ul class="swiper-wrapper repair-slider__items">
-          <li class="swiper-slide repair-slider__item"><a class="repair-button" href="#"><p class="repair-slider__text">Ремонт ноутбуков</p><img class="repair-slider__img" src="img/brands-arrow.png"></a>
+          <li class="swiper-slide repair-slider__item">
+            <a class="repair-button" href="#">
+              <p class="repair-slider__text">Ремонт ноутбуков</p>
+              <img class="repair-slider__img" src="img/brands-arrow.png">
+            </a>
           </li>
-          <li class="swiper-slide repair-slider__item"><a class="repair-button" href="#"><p class="repair-slider__text">Ремонт планшетов</p><img class="repair-slider__img" src="img/brands-arrow.png"></a>
+          <li class="swiper-slide repair-slider__item">
+            <a class="repair-button" href="#">
+              <p class="repair-slider__text">Ремонт планшетов</p>
+              <img class="repair-slider__img" src="img/brands-arrow.png">
+            </a>
           </li>
-          <li class="swiper-slide repair-slider__item"><a class="repair-button" href="#"><p class="repair-slider__text">Ремонт ПК</p><img class="repair-slider__img" src="img/brands-arrow.png"></a>
+          <li class="swiper-slide repair-slider__item">
+            <a class="repair-button" href="#">
+              <p class="repair-slider__text">Ремонт ПК</p>
+              <img class="repair-slider__img" src="img/brands-arrow.png">
+            </a>
           </li>
-          <li class="swiper-slide repair-slider__item"><a class="repair-button" href="#"><p class="repair-slider__text">Ремонт мониторов</p><img class="repair-slider__img" src="img/brands-arrow.png"></a>
+          <li class="swiper-slide repair-slider__item">
+            <a class="repair-button" href="#">
+              <p class="repair-slider__text">Ремонт мониторов</p>
+              <img class="repair-slider__img" src="img/brands-arrow.png">
+            </a>
           </li>
-          <li class="swiper-slide repair-slider__item"><a class="repair-button" href="#"><p class="repair-slider__text">Ремонт ноутбуков</p><img class="repair-slider__img" src="img/brands-arrow.png"></a>
+          <li class="swiper-slide repair-slider__item"><a class="repair-button" href="#">
+            <a class="repair-button" href="#">
+              <p class="repair-slider__text">Ремонт ноутбуков</p>
+              <img class="repair-slider__img" src="img/brands-arrow.png">
+            </a>
+          </a></li>
+          <li class="swiper-slide repair-slider__item">
+            <a class="repair-button" href="#">
+              <p class="repair-slider__text">Ремонт планшетов</p>
+              <img class="repair-slider__img" src="img/brands-arrow.png">
+            </a>
           </li>
-          <li class="swiper-slide repair-slider__item"><a class="repair-button" href="#"><p class="repair-slider__text">Ремонт планшетов</p><img class="repair-slider__img" src="img/brands-arrow.png"></a>
+          <li class="swiper-slide repair-slider__item">
+            <a class="repair-button" href="#">
+              <p class="repair-slider__text">Ремонт планшетов</p>
+              <img class="repair-slider__img" src="img/brands-arrow.png">
+            </a>
           </li>
-          <li class="swiper-slide repair-slider__item"><a class="repair-button" href="#"><p class="repair-slider__text">Ремонт ПК</p><img class="repair-slider__img" src="img/brands-arrow.png"></a>
+          <li class="swiper-slide repair-slider__item">
+            <a class="repair-button" href="#">
+              <p class="repair-slider__text">Ремонт мониторов</p>
+              <img class="repair-slider__img" src="img/brands-arrow.png">
+            </a>
           </li>
-          <li class="swiper-slide repair-slider__item"><a class="repair-button" href="#"><p class="repair-slider__text">Ремонт мониторов</p><img class="repair-slider__img" src="img/brands-arrow.png"></a>
+          <li class="swiper-slide repair-slider__item">
+            <a class="repair-button" href="#">
+              <p class="repair-slider__text">Ремонт планшетов</p>
+              <img class="repair-slider__img" src="img/brands-arrow.png">
+            </a>
           </li>
-          <li class="swiper-slide repair-slider__item"><a class="repair-button" href="#"><p class="repair-slider__text">Ремонт ноутбуков</p><img class="repair-slider__img" src="img/brands-arrow.png"></a>
+          <li class="repair-slider__item repair-slider__item--hidden visually-hidden">
+            <a class="repair-button" href="#">
+              <p class="repair-slider__text">Ремонт ноутбуков</p>
+              <img class="repair-slider__img" src="img/brands-arrow.png">
+            </a>
           </li>
-          <li class="repair-slider__item repair-slider__item--hidden visually-hidden"><a class="repair-button" href="#"><p class="repair-slider__text">Ремонт планшетов</p><img class="repair-slider__img" src="img/brands-arrow.png"></a>
+          <li class="repair-slider__item repair-slider__item--hidden visually-hidden">
+            <a class="repair-button" href="#">
+              <p class="repair-slider__text">Ремонт планшетов</p>
+              <img class="repair-slider__img" src="img/brands-arrow.png">
+            </a>
           </li>
-          <li class="repair-slider__item repair-slider__item--hidden visually-hidden"><a class="repair-button" href="#"><p class="repair-slider__text">Ремонт ПК</p><img class="repair-slider__img" src="img/brands-arrow.png"></a>
+          <li class="repair-slider__item repair-slider__item--hidden visually-hidden">
+            <a class="repair-button" href="#">
+              <p class="repair-slider__text">Ремонт мониторов</p>
+              <img class="repair-slider__img" src="img/brands-arrow.png">
+            </a>
           </li>
-          <li class="repair-slider__item repair-slider__item--hidden visually-hidden"><a class="repair-button" href="#"><p class="repair-slider__text">Ремонт мониторов</p><img class="repair-slider__img" src="img/brands-arrow.png"></a>
+          <li class="repair-slider__item repair-slider__item--hidden visually-hidden">
+            <a class="repair-button" href="#">
+              <p class="repair-slider__text">Ремонт планшетов</p>
+              <img class="repair-slider__img" src="img/brands-arrow.png">
+            </a>
           </li>
-          <li class="repair-slider__item repair-slider__item--hidden visually-hidden"><a class="repair-button" href="#"><p class="repair-slider__text">Ремонт ноутбуков</p><img class="repair-slider__img" src="img/brands-arrow.png"></a>
+          <li class="repair-slider__item repair-slider__item--hidden visually-hidden">
+            <a class="repair-button" href="#">
+              <p class="repair-slider__text">Ремонт планшетов</p>
+              <img class="repair-slider__img" src="img/brands-arrow.png">
+            </a>
           </li>
-          <li class="repair-slider__item repair-slider__item--hidden visually-hidden"><a class="repair-button" href="#"><p class="repair-slider__text">Ремонт планшетов</p><img class="repair-slider__img" src="img/brands-arrow.png"></a>
+          <li class="repair-slider__item repair-slider__item--hidden visually-hidden"><a class="repair-button" href="#">
+            <p class="repair-slider__text">Ремонт ноутбуков</p>
+            <img class="repair-slider__img" src="img/brands-arrow.png">
+          </a>
           </li>
-          <li class="repair-slider__item repair-slider__item--hidden visually-hidden"><a class="repair-button" href="#"><p class="repair-slider__text">Ремонт ПК</p><img class="repair-slider__img" src="img/brands-arrow.png"></a>
-          </li>
-          <li class="repair-slider__item repair-slider__item--hidden visually-hidden"><a class="repair-button" href="#"><p class="repair-slider__text">Ремонт мониторов</p><img class="repair-slider__img" src="img/brands-arrow.png"></a>
+          <li class="repair-slider__item repair-slider__item--hidden visually-hidden">
+            <a class="repair-button" href="#">
+              <p class="repair-slider__text">Ремонт мониторов</p>
+              <img class="repair-slider__img" src="img/brands-arrow.png">
+            </a>
           </li>
         </ul>
         <div class="show-more">

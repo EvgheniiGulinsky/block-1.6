@@ -591,8 +591,7 @@ button {
   .side-nav__wrapper {
     display: flex;
     flex-direction: column;
-    height: 100%;
-    overflow: scroll; }
+    height: 100%; }
   .side-nav--visible {
     position: fixed;
     top: 0;
@@ -644,9 +643,10 @@ button {
         position: absolute;
         left: -24px;
         top: -6px;
-        height: 32px;
+        background: url(./static/highlight.svg);
         width: 4px;
-        background-color: #B8FFEC; }
+        height: 40px;
+        background-size: 4px 40px; }
   .side-nav__footer {
     margin-top: 32px; }
     @media (min-width: 768px) and (max-width: 1439px) {
