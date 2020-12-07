@@ -4,11 +4,11 @@ Swiper.use( Pagination);
 
 //=======================Слайдер=========================
 
-let brandsSwiper = undefined;
+let brandsSwiper;
 
-const returnedFunction = debounce(function () {
+const returnedFunction = debounce(function() {
 
-    if (window.matchMedia("(max-width: 767px)").matches && brandsSwiper === undefined) {
+    if (window.matchMedia("(max-width: 767px)").matches && !brandsSwiper) {
 
         brandsSwiper = new Swiper('.brands-slider', {
             init: false,
@@ -31,11 +31,11 @@ const returnedFunction = debounce(function () {
 
         brandsSwiper.init();
 
-    } else if (window.matchMedia("(max-width: 767px)").matches && brandsSwiper !== undefined) {
+    } else if (window.matchMedia("(max-width: 767px)").matches && brandsSwiper) {
         brandsSwiper.pagination.render();
         brandsSwiper.pagination.update();
 
-    } else if (brandsSwiper !== undefined) {
+    } else if (brandsSwiper) {
         brandsSwiper.destroy();
         brandsSwiper = undefined;
     }
@@ -46,10 +46,10 @@ window.addEventListener('resize', returnedFunction);
 
 //=======================Скриваем/Показываем кнопки=========================
 
-const hideElement = debounce(function () {
+const hideElement = debounce(function() {
     let brands = Array.from(document.getElementsByClassName("brands-slider__item--hidden"));
 
-    brands.forEach(function (brand) {
+    brands.forEach(function(brand) {
         if (window.matchMedia("(min-width: 768px)").matches) {
             brand.classList.remove("visually-hidden");
         } else {
@@ -65,7 +65,7 @@ window.addEventListener('resize', hideElement);
 
 let btn = document.getElementById("show-more-brands");
 
-btn.addEventListener("click", function () {
+btn.addEventListener("click", function() {
     btn.classList.toggle("show-more__btn--active");
         if (btn.classList.contains("show-more__btn--active")) {
         btn.innerHTML = "Скрыть";
@@ -78,25 +78,25 @@ btn.addEventListener("click", function () {
 //=======================Скриваем/Показываем элементы=========================
 let brands = Array.from(document.getElementsByClassName("brands-slider__item"));
 
-btn.addEventListener("click", function () {
+btn.addEventListener("click", function() {
     showMore();
 });
 
-const showMore = debounce(function () {
+const showMore = debounce(function() {
 
     if (window.matchMedia("(max-width: 767px)").matches) {
-        brands.forEach(function (brand, i) {
+        brands.forEach(function(brand, i) {
             brand.style.display = "flex"
         })
     } else if (window.matchMedia("(min-width: 768px) and (max-width: 1119px)").matches) {
         if (btn.classList.contains("show-more__btn--active")) {
-            brands.forEach(function (brand, i) {
+            brands.forEach(function(brand, i) {
                 if (i > 5) {
                     brand.style.display = "flex"
                 }
             })
         } else {
-            brands.forEach(function (brand, i) {
+            brands.forEach(function(brand, i) {
                 if (i > 5) {
                     brand.style.display = "none"
                 }
@@ -105,14 +105,14 @@ const showMore = debounce(function () {
     } else if (window.matchMedia("(min-width: 1120px)").matches) {
 
         if (btn.classList.contains("show-more__btn--active")) {
-            brands.forEach(function (brand, i) {
+            brands.forEach(function(brand, i) {
 
                 if (i > 7) {
                     brand.style.display = "flex"
                 }
             })
         } else {
-            brands.forEach(function (brand, i) {
+            brands.forEach(function(brand, i) {
 
                 brand.style.display = "flex";
                 if (i > 7) {

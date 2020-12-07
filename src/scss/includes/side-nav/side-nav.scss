@@ -17,7 +17,6 @@
     display: flex;
     flex-direction: column;
     height: 100%;
-    overflow: scroll;
   }
   &--visible {
     position: fixed;
@@ -64,8 +63,6 @@
       margin-left: auto;
     }
   }
-  &__logo {
-  }
   &__links li {
     margin-top: 24px;
     margin-bottom: auto;
@@ -84,9 +81,10 @@
         position: absolute;
         left: -24px;
         top: -6px;
-        height: 32px;
+        background: url(../img/highlight.svg);
         width: 4px;
-        background-color: $borderColor;
+        height: 40px;
+        background-size: 4px 40px;
       }
     }
   }
