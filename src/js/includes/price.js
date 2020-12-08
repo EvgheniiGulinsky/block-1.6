@@ -4,11 +4,11 @@ Swiper.use( Pagination);
 
 //=======================Слайдер=========================
 
-let priceSwiper = undefined;
+let priceSwiper ;
 
 const returnedFunction = debounce(function () {
 
-    if (window.matchMedia("(max-width: 767px)").matches && priceSwiper === undefined) {
+    if (window.matchMedia("(max-width: 767px)").matches && !priceSwiper) {
 
         priceSwiper = new Swiper('.price-slider', {
             init: false,
@@ -31,13 +31,13 @@ const returnedFunction = debounce(function () {
 
         priceSwiper.init();
 
-    } else if (window.matchMedia("(max-width: 767px)").matches && priceSwiper !== undefined) {
+    } else if (window.matchMedia("(max-width: 767px)").matches && priceSwiper) {
         priceSwiper.pagination.render();
         priceSwiper.pagination.update();
 
-    } else if (priceSwiper !== undefined) {
+    } else if (priceSwiper) {
         priceSwiper.destroy();
-        priceSwiper = undefined;
+        priceSwiper = false;
     }
 }, 250);
 

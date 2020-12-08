@@ -1,10 +1,10 @@
-let feedbackOpenHeaderButton = document.getElementById("feedbackOpenHeader");
-let feedbackOpenSideButton = document.getElementById("feedbackOpenSide");
-let feedbackCloseButton = document.getElementById("feedbackClose");
-let feedbackModal = document.getElementById("feedback");
+const feedbackOpenHeaderButton = document.getElementById("feedbackOpenHeader");
+const feedbackOpenSideButton = document.getElementById("feedbackOpenSide");
+const feedbackCloseButton = document.getElementById("feedbackClose");
+const feedbackModal = document.getElementById("feedback");
 const body = document.querySelector("body");
-let main = document.getElementById('main');
-let nav = document.getElementById('side-nav');
+const main = document.getElementById('main');
+const nav = document.getElementById('side-nav');
 
 
 

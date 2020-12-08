@@ -47,7 +47,7 @@ window.addEventListener('resize', returnedFunction);
 //=======================Скриваем/Показываем кнопки=========================
 
 const hideElement = debounce(function() {
-    let brands = Array.from(document.getElementsByClassName("brands-slider__item--hidden"));
+    const brands = [...document.getElementsByClassName("brands-slider__item--hidden")]
 
     brands.forEach(function(brand) {
         if (window.matchMedia("(min-width: 768px)").matches) {
@@ -76,7 +76,7 @@ btn.addEventListener("click", function() {
 });
 
 //=======================Скриваем/Показываем элементы=========================
-const brands = Array.from(document.getElementsByClassName("brands-slider__item"));
+const brands = [...document.getElementsByClassName("brands-slider__item")]
 
 btn.addEventListener("click", function() {
     showMore();

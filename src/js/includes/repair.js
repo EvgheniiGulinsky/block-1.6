@@ -46,7 +46,7 @@ window.addEventListener('resize', returnedFunction);
 //=======================Скрываем/Показываем кнопки=========================
 
 const hideElement = debounce(function() {
-    let brands = Array.from(document.getElementsByClassName("repair-slider__item--hidden"));
+    const brands = [...document.getElementsByClassName("repair-slider__item--hidden")]
 
     brands.forEach(function(brand) {
         if (window.matchMedia("(min-width: 768px)").matches) {
@@ -62,7 +62,7 @@ window.addEventListener('resize', hideElement);
 
 //============Show more btn===============================================
 
-let btn = document.getElementById("show-more-repair");
+const btn = document.getElementById("show-more-repair");
 
 btn.addEventListener("click", function() {
     btn.classList.toggle("show-more__btn--active");
@@ -76,7 +76,7 @@ btn.addEventListener("click", function() {
 });
 
 //=======================Скрываем/Показываем элементы=========================
-let brands = Array.from(document.getElementsByClassName("repair-slider__item"));
+const brands = [...document.getElementsByClassName("repair-slider__item")]
 
 btn.addEventListener("click", function() {
     showMore();
