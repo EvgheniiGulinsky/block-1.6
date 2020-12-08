@@ -1,9 +1,9 @@
-let callOpenHeaderButton = document.getElementById("callHeaderOpen");
-let callOpenSideButton = document.getElementById("callOpenSide");
-let callCloseButton = document.getElementById("callClose");
-let callModal = document.getElementById("call");
-let main = document.getElementById('main');
-let nav = document.getElementById('side-nav');
+const callOpenHeaderButton = document.getElementById("callHeaderOpen");
+const callOpenSideButton = document.getElementById("callOpenSide");
+const callCloseButton = document.getElementById("callClose");
+const callModal = document.getElementById("call");
+const main = document.getElementById('main');
+const nav = document.getElementById('side-nav');
 const body = document.querySelector("body");
 
 function callOpen() {

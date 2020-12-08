@@ -1,7 +1,7 @@
-let open = document.getElementById('openMenu');
-let close = document.getElementById('closeMenu');
-let nav = document.getElementById('side-nav');
-let main = document.getElementById('main');
+const open = document.getElementById('openMenu');
+const close = document.getElementById('closeMenu');
+const nav = document.getElementById('side-nav');
+const main = document.getElementById('main');
 const body = document.querySelector("body");
 
 

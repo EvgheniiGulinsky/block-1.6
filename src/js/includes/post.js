@@ -1,5 +1,5 @@
-let showMorePost = document.getElementById('show-more');
-let posts = document.getElementsByClassName('post__text--additional');
+const showMorePost = document.getElementById('show-more');
+const posts = document.getElementsByClassName('post__text--additional');
 
 showMorePost.addEventListener('click', function () {
     showMorePost.classList.toggle('show-more-btn--active');

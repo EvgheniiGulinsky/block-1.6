@@ -3,11 +3,11 @@ import Swiper, { Pagination } from 'swiper';
 Swiper.use( Pagination);
 
 
-let repairSwiper = undefined;
+let repairSwiper;
 
 const returnedFunction = debounce(function () {
 
-    if (window.matchMedia("(max-width: 767px)").matches && repairSwiper === undefined) {
+    if (window.matchMedia("(max-width: 767px)").matches && !repairSwiper) {
 
         repairSwiper = new Swiper('.repair-slider', {
             init: false,
@@ -30,25 +30,25 @@ const returnedFunction = debounce(function () {
 
         repairSwiper.init();
 
-    } else if (window.matchMedia("(max-width: 767px)").matches && repairSwiper !== undefined) {
+    } else if (window.matchMedia("(max-width: 767px)").matches && repairSwiper) {
         repairSwiper.pagination.render();
         repairSwiper.pagination.update();
 
-    } else if (repairSwiper !== undefined) {
+    } else if (repairSwiper) {
         repairSwiper.destroy();
-        repairSwiper = undefined;
+        repairSwiper = false
     }
 }, 250);
 
 returnedFunction();
 window.addEventListener('resize', returnedFunction);
 
-//=======================Скриваем/Показываем кнопки=========================
+//=======================Скрываем/Показываем кнопки=========================
 
-const hideElement = debounce(function () {
+const hideElement = debounce(function() {
     let brands = Array.from(document.getElementsByClassName("repair-slider__item--hidden"));
 
-    brands.forEach(function (brand) {
+    brands.forEach(function(brand) {
         if (window.matchMedia("(min-width: 768px)").matches) {
             brand.classList.remove("visually-hidden");
         } else {
@@ -64,7 +64,7 @@ window.addEventListener('resize', hideElement);
 
 let btn = document.getElementById("show-more-repair");
 
-btn.addEventListener("click", function () {
+btn.addEventListener("click", function() {
     btn.classList.toggle("show-more__btn--active");
 
     if (btn.classList.contains("show-more__btn--active")) {
@@ -75,28 +75,28 @@ btn.addEventListener("click", function () {
     }
 });
 
-//=======================Скриваем/Показываем элементы=========================
+//=======================Скрываем/Показываем элементы=========================
 let brands = Array.from(document.getElementsByClassName("repair-slider__item"));
 
-btn.addEventListener("click", function () {
+btn.addEventListener("click", function() {
     showMore();
 });
 
-const showMore = debounce(function () {
+const showMore = debounce(function() {
 
     if (window.matchMedia("(max-width: 767px)").matches) {
-        brands.forEach(function (brand, i) {
+        brands.forEach(function(brand, i) {
             brand.style.display = "flex"
         })
     } else if (window.matchMedia("(min-width: 768px) and (max-width: 1119px)").matches) {
         if (btn.classList.contains("show-more__btn--active")) {
-            brands.forEach(function (brand, i) {
+            brands.forEach(function(brand, i) {
                 if (i > 2) {
                     brand.style.display = "flex"
                 }
             })
         } else {
-            brands.forEach(function (brand, i) {
+            brands.forEach(function(brand, i) {
                 if (i > 2) {
                     brand.style.display = "none"
                 }
@@ -105,14 +105,14 @@ const showMore = debounce(function () {
     } else if (window.matchMedia("(min-width: 1120px)").matches) {
 
         if (btn.classList.contains("show-more__btn--active")) {
-            brands.forEach(function (brand, i) {
+            brands.forEach(function(brand, i) {
 
                 if (i > 3) {
                     brand.style.display = "flex"
                 }
             })
         } else {
-            brands.forEach(function (brand, i) {
+            brands.forEach(function(brand, i) {
 
                 brand.style.display = "flex";
                 if (i > 3) {

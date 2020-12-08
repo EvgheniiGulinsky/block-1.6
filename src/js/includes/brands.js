@@ -37,7 +37,7 @@ const returnedFunction = debounce(function() {
 
     } else if (brandsSwiper) {
         brandsSwiper.destroy();
-        brandsSwiper = undefined;
+        brandsSwiper = false;
     }
 }, 250);
 
