@@ -63,7 +63,7 @@ window.addEventListener('resize', hideElement);
 
 //============Show more btn===============================================
 
-let btn = document.getElementById("show-more-brands");
+const btn = document.getElementById("show-more-brands");
 
 btn.addEventListener("click", function() {
     btn.classList.toggle("show-more__btn--active");
@@ -76,7 +76,7 @@ btn.addEventListener("click", function() {
 });
 
 //=======================Скриваем/Показываем элементы=========================
-let brands = Array.from(document.getElementsByClassName("brands-slider__item"));
+const brands = Array.from(document.getElementsByClassName("brands-slider__item"));
 
 btn.addEventListener("click", function() {
     showMore();
